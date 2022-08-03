@@ -1,0 +1,20 @@
+@font-face {
+  font-family: XinYeNian;
+  src: url("./assets/fonts/XinYeNianTi-2.otf");
+}
+
+body, html {
+  font-family: XinYeNian;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  color: rgb(20, 20, 20);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.el-tag {
+  font-size: 18px !important;
+}

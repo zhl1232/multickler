@@ -1,1 +1,1 @@
-在线浏览项目：https://shiramashiro.gitee.io/fun-notebook/
+在线浏览项目：https://enziandom.gitee.io/gadget-notebook/

@@ -11,22 +11,24 @@ const props = defineProps({
   depth: String,
   justify: {
     validator(value) {
-      return ['flex-start', 'center', 'flex-end', 'space-between', 'space-around', 'space-evenly'].includes(value);
+      return ["flex-start", "center", "flex-end", "space-between", "space-around", "space-evenly"].includes(value);
     }
   }
 });
 </script>
 
 <template>
-  <div class="book-mark"
-       :style="{
-          'justify-content': justify,
-          'right': right + 'px',
-          'top': top + 'px',
-          'background-color': bgcolor,
-          'padding-left': pdl + 'px',
-          'padding-right': pdr + 'px',
-          'z-index': depth + ''}">
+  <div
+    class="book-mark"
+    :style="{
+      'justify-content': justify,
+      right: right + 'px',
+      top: top + 'px',
+      'background-color': bgcolor,
+      'padding-left': pdl + 'px',
+      'padding-right': pdr + 'px',
+      'z-index': depth + ''
+    }">
     <div>
       {{ title }}
     </div>

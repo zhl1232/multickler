@@ -29,15 +29,12 @@ let index = ref(0);
 let audio = ref(null);
 let flag = ref(true);
 let methods = {};
-let icons = ref([
-  "https://generic-data.oss-cn-chengdu.aliyuncs.com/2022Qixi/play.svg",
-  "https://generic-data.oss-cn-chengdu.aliyuncs.com/2022Qixi/stop.svg"
-]);
+let icons = ref(["https://generic-data.oss-cn-chengdu.aliyuncs.com/2022Qixi/play.svg", "https://generic-data.oss-cn-chengdu.aliyuncs.com/2022Qixi/stop.svg"]);
 let iconIndex = ref(0);
 
 onMounted(() => {
   methods.onclickLeft = () => {
-    if ( index.value <= 0 ) {
+    if (index.value <= 0) {
       index.value = musics.value.length - 1;
     } else {
       index.value--;
@@ -47,7 +44,7 @@ onMounted(() => {
   };
 
   methods.onclickStopOrPlay = () => {
-    if ( flag.value ) {
+    if (flag.value) {
       audio.value.play();
       iconIndex.value = 1;
     } else {
@@ -58,7 +55,7 @@ onMounted(() => {
   };
 
   methods.onclickRight = () => {
-    if ( index.value >= musics.value.length - 1 ) {
+    if (index.value >= musics.value.length - 1) {
       index.value = 0;
     } else {
       index.value++;
@@ -71,8 +68,7 @@ onMounted(() => {
 
 <template>
   <div class="music-player">
-    <Sticker src="https://generic-data.oss-cn-chengdu.aliyuncs.com/2022Qixi/8414ee132a3c13aa2b90b6cfce339bc1.jpeg"
-             top="10" left="315" width="60" height="60" />
+    <Sticker src="https://generic-data.oss-cn-chengdu.aliyuncs.com/2022Qixi/8414ee132a3c13aa2b90b6cfce339bc1.jpeg" top="10" left="315" width="60" height="60" />
     <audio ref="audio" :src="musics[index].src" style="display: none"></audio>
     <div class="msg title">歌曲名：{{ musics[index].title }}</div>
     <div class="msg author">作者：{{ musics[index].author }}</div>
@@ -82,13 +78,13 @@ onMounted(() => {
     <div class="control-wrapper">
       <div class="control">
         <div class="left">
-          <img @click="methods.onclickLeft" src="../../assets/icons/left.svg" alt="">
+          <img @click="methods.onclickLeft" src="../../assets/icons/left.svg" alt="" />
         </div>
         <div class="stop-or-play">
-          <img @click="methods.onclickStopOrPlay" :src="icons[iconIndex]" alt="">
+          <img @click="methods.onclickStopOrPlay" :src="icons[iconIndex]" alt="" />
         </div>
         <div class="right">
-          <img @click="methods.onclickRight" src="../../assets/icons/right.svg" alt="">
+          <img @click="methods.onclickRight" src="../../assets/icons/right.svg" alt="" />
         </div>
       </div>
     </div>

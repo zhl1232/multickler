@@ -25,7 +25,8 @@ let activeComponent = shallowRef(ClosedNoteBook);
   opacity: 0;
 }
 
-.el-button, .el-input {
+.el-button,
+.el-input {
   font-family: XinYeNian !important;
 }
 </style>

@@ -1,23 +1,21 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { ElMessage } from "element-plus";
-import { formatDate } from "../../utils/date-formatter.js";
 import awarding from "../../assets/audio/awarding.wav";
 import failure from "../../assets/audio/failure.wav";
 
 let point = ref(null);
 let audio = ref(null);
 let layout = ref([]);
-let methods = ref({});
 let audioSrc = [awarding, failure];
 let audioSrcIndex = ref(0);
 let usedTime = ref(0);
 
 function initLayout() {
   let index = 0;
-  for ( let i = 0; i < 12; i++ ) {
+  for (let i = 0; i < 12; i++) {
     layout.value[i] = [];
-    for ( let j = 0; j < 12; j++ ) {
+    for (let j = 0; j < 12; j++) {
       layout.value[i][j] = point.value[index];
       index++;
     }
@@ -38,7 +36,7 @@ let score = ref(0);
 let isDead = false;
 
 function controller(condition, movement, options = { lcolor: "white", color: "rgb(212, 173,188)" }) {
-  if ( !isDead ) {
+  if (!isDead) {
     countTime();
   }
   clearInterval(interval.value);
@@ -47,7 +45,7 @@ function controller(condition, movement, options = { lcolor: "white", color: "rg
     lx.value = x.value;
     layout.value[ly.value][lx.value].style.backgroundColor = options.lcolor;
     movement();
-    if ( condition() ) {
+    if (condition()) {
       layout.value[ly.value][lx.value].style.backgroundColor = options.lcolor;
       layout.value[0][0].style.backgroundColor = options.color;
       ElMessage.error("你已经超出地图边界！");
@@ -64,7 +62,7 @@ function controller(condition, movement, options = { lcolor: "white", color: "rg
     } else {
       isDead = false;
       layout.value[y.value][x.value].style.backgroundColor = options.color;
-      if ( rx.value === y.value && ry.value === x.value ) {
+      if (rx.value === y.value && ry.value === x.value) {
         audioSrcIndex.value = 0;
         audio.value.play();
         score.value++;
@@ -96,28 +94,43 @@ function countTime() {
 
 function initPoint() {
   countTime();
-  controller(() => x.value >= 12, () => x.value++);
+  controller(
+    () => x.value >= 12,
+    () => x.value++
+  );
 }
 
 function downPoint() {
-  controller(() => y.value >= 12, () => y.value++);
+  controller(
+    () => y.value >= 12,
+    () => y.value++
+  );
 }
 
 function upPoint() {
-  controller(() => y.value < 0, () => y.value--);
+  controller(
+    () => y.value < 0,
+    () => y.value--
+  );
 }
 
 function leftPoint() {
-  controller(() => x.value < 0, () => x.value--);
+  controller(
+    () => x.value < 0,
+    () => x.value--
+  );
 }
 
 function rightPoint() {
-  controller(() => x.value >= 12, () => x.value++);
+  controller(
+    () => x.value >= 12,
+    () => x.value++
+  );
 }
 
 function onInputChange(value) {
   clearInterval(interval.value);
-  if ( value === 100 ) {
+  if (value === 100) {
     ElMessage.warning("这就是大佬吗，这样的速度都无法满足！");
   }
 }
@@ -144,7 +157,9 @@ onMounted(() => {
           <el-input-number size="small" v-model="speed" :min="100" :max="800" :step="50" @change="onInputChange" />
         </div>
       </div>
-      <div class="score">得分：<span>{{ score }}</span></div>
+      <div class="score">
+        得分：<span>{{ score }}</span>
+      </div>
       <div class="used-time">用时：{{ usedTime }} s</div>
     </div>
     <div class="controls">
@@ -183,7 +198,7 @@ onMounted(() => {
 }
 
 .games .content {
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
   width: 300px;
   height: 300px;
   display: flex;
@@ -198,7 +213,7 @@ onMounted(() => {
   width: 25px;
   height: 25px;
   box-sizing: border-box;
-  border: 1px solid #F0F0F0;
+  border: 1px solid #f0f0f0;
   background-color: white;
 }
 
@@ -221,7 +236,8 @@ onMounted(() => {
   align-content: center;
 }
 
-.layer-1, .layer-2 {
+.layer-1,
+.layer-2 {
   position: absolute;
 }
 

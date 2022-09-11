@@ -20,15 +20,18 @@ onMounted(() => {
 });
 
 function setPageObjStyle(page, lOrR) {
-  let width = `${ notebook.value.clientWidth * 0.5 - 28 }px`;
-  let height = `${ notebook.value.clientHeight }px`;
-  let zIndexGape = -2, offsetGap = -2, offset = offsetGap, zIndex = zIndexGape;
-  for ( let key in page.value ) {
+  let width = `${notebook.value.clientWidth * 0.5 - 28}px`;
+  let height = `${notebook.value.clientHeight}px`;
+  let zIndexGape = -2,
+    offsetGap = -2,
+    offset = offsetGap,
+    zIndex = zIndexGape;
+  for (let key in page.value) {
     let style = page.value[key].style;
     style.width = width;
     style.height = height;
     style.zIndex = zIndex;
-    style[lOrR] = `${ offset }px`;
+    style[lOrR] = `${offset}px`;
     offset += offsetGap * 2;
     zIndex += zIndex;
   }
@@ -49,7 +52,7 @@ let leftActiveComp = shallowRef(CustTimeLine);
           </keep-alive>
         </Transition>
       </div>
-      <div class="right" style="z-index: 1;" ref="rPart">
+      <div class="right" style="z-index: 1" ref="rPart">
         <Transition name="fade" mode="out-in">
           <keep-alive>
             <component :is="rightActiveComp" />
@@ -57,14 +60,10 @@ let leftActiveComp = shallowRef(CustTimeLine);
         </Transition>
       </div>
       <div class="page right-page" v-for="(value, key) in 4" :key="key" ref="rPage"></div>
-      <BookMark @click="rightActiveComp = MusicPlayer" title="歌曲" justify="flex-end" pdr="15" right="-80" top="20"
-                bgcolor="rgb(120 186 237 / 80%)" />
-      <BookMark @click="rightActiveComp = PatchedPictures" title="相册" justify="flex-end" pdr="10" right="-60" top="120"
-                bgcolor="rgb(237 202 146 / 80%)" />
-      <BookMark @click="leftActiveComp = CustTimeLine" title="事件" justify="flex-start" pdl="10" right="810" top="360"
-                bgcolor="rgb(149 209 157 / 80%)" />
-      <BookMark @click="leftActiveComp = MiniGames" title="游戏" justify="flex-start" pdl="10" right="830" top="500"
-                bgcolor="rgb(205 207 234 / 80%)" />
+      <BookMark @click="rightActiveComp = MusicPlayer" title="歌曲" justify="flex-end" pdr="15" right="-80" top="20" bgcolor="rgb(120 186 237 / 80%)" />
+      <BookMark @click="rightActiveComp = PatchedPictures" title="相册" justify="flex-end" pdr="10" right="-60" top="120" bgcolor="rgb(237 202 146 / 80%)" />
+      <BookMark @click="leftActiveComp = CustTimeLine" title="事件" justify="flex-start" pdl="10" right="810" top="360" bgcolor="rgb(149 209 157 / 80%)" />
+      <BookMark @click="leftActiveComp = MiniGames" title="游戏" justify="flex-start" pdl="10" right="830" top="500" bgcolor="rgb(205 207 234 / 80%)" />
     </div>
   </div>
 </template>
@@ -83,7 +82,7 @@ let leftActiveComp = shallowRef(CustTimeLine);
   box-sizing: border-box;
   z-index: 999;
   position: relative;
-  background-color: #D0C3C8;
+  background-color: #d0c3c8;
   display: flex;
   justify-content: space-between;
   align-content: start;
@@ -93,11 +92,12 @@ let leftActiveComp = shallowRef(CustTimeLine);
   border-top-width: 15px;
   border-bottom-width: 15px;
   border-style: solid;
-  border-color: #D4ADBC;
+  border-color: #d4adbc;
   border-radius: 20px;
 }
 
-.left, .right {
+.left,
+.right {
   z-index: 9999;
   overflow-x: auto;
   background-color: white;
@@ -108,23 +108,23 @@ let leftActiveComp = shallowRef(CustTimeLine);
 }
 
 .left {
-  border-right: 2px solid #CCCC;
+  border-right: 2px solid #cccc;
 }
 
 .page {
   border-radius: 18px;
   position: absolute;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   box-sizing: border-box;
   top: 0;
 }
 
 .right-page {
-  border-right: 2px solid #CCC9C9;
+  border-right: 2px solid #ccc9c9;
 }
 
 .left-page {
-  border-left: 2px solid #CCC9C9;
+  border-left: 2px solid #ccc9c9;
 }
 
 .fade-enter-active,

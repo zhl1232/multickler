@@ -21,10 +21,7 @@ let active = ref("1");
         </el-collapse-item>
       </el-collapse>
       <div class="thing-picture" v-if="eV.imgs">
-        <el-image style="width: 100px; height: 100px" :initial-index="iK"
-                  fit="cover" :src="iV"
-                  :preview-src-list="eV.imgs" v-for="(iV, iK) in eV.imgs" :key="iK">
-        </el-image>
+        <el-image style="width: 100px; height: 100px" :initial-index="iK" fit="cover" :src="iV" :preview-src-list="eV.imgs" v-for="(iV, iK) in eV.imgs" :key="iK"> </el-image>
       </div>
     </div>
   </div>

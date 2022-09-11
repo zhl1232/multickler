@@ -1,15 +1,15 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
   <div class="patched-pictures">
     <div class="picture picture-1">
       <div class="wrapper">
-        <div class="title msg-1">
-          测试文字测试文字测试文字
-        </div>
+        <div class="title msg-1">测试文字测试文字测试文字</div>
       </div>
-      <img class="img-1" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202108%2F04%2F20210804120908_96d67.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1662128169&t=5448a04300b16357a6f0d71579a2c154" alt="">
+      <img
+        class="img-1"
+        src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202108%2F04%2F20210804120908_96d67.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1662128169&t=5448a04300b16357a6f0d71579a2c154"
+        alt="" />
     </div>
     <div class="picture picture-2">
       <div class="wrapper">
@@ -17,25 +17,30 @@
         <div class="sticky-tape tape-2-1"></div>
         <div class="sticky-tape tape-2-2"></div>
       </div>
-      <img class="img-2" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202107%2F14%2F20210714190121_23a13.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1662128219&t=6e796d174563a748ff44675085cbf326" alt="">
+      <img
+        class="img-2"
+        src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202107%2F14%2F20210714190121_23a13.thumb.1000_0.jpg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1662128219&t=6e796d174563a748ff44675085cbf326"
+        alt="" />
     </div>
     <div class="picture picture-3">
       <div class="wrapper">
-        <div class="title msg-3">
-          测试文字测试文字测试文字
-        </div>
+        <div class="title msg-3">测试文字测试文字测试文字</div>
         <div class="sticky-tape tape-3"></div>
       </div>
-      <img class="img-3" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202106%2F24%2F20210624091817_9f9f6.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1662128227&t=4ae7921894d3230868e35ccbb8f2f9c3" alt="">
+      <img
+        class="img-3"
+        src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202106%2F24%2F20210624091817_9f9f6.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1662128227&t=4ae7921894d3230868e35ccbb8f2f9c3"
+        alt="" />
     </div>
     <div class="picture picture-4">
       <div class="wrapper">
         <div class="sticky-tape tape-4"></div>
-        <div class="title msg-4">
-          测试文字测试文字测试文字
-        </div>
+        <div class="title msg-4">测试文字测试文字测试文字</div>
       </div>
-      <img class="img-4" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2F1114%2F0F620093053%2F200F6093053-7-1200.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1662128169&t=b236b80b21d62a2b060fc776dba82fa1" alt="">
+      <img
+        class="img-4"
+        src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.jj20.com%2Fup%2Fallimg%2F1114%2F0F620093053%2F200F6093053-7-1200.jpg&refer=http%3A%2F%2Fimg.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1662128169&t=b236b80b21d62a2b060fc776dba82fa1"
+        alt="" />
     </div>
   </div>
 </template>
@@ -49,7 +54,7 @@ img {
   position: absolute;
   object-fit: cover;
   border-radius: 4px;
-  border: 10px solid #F4F4F4;
+  border: 10px solid #f4f4f4;
   box-sizing: border-box;
 }
 

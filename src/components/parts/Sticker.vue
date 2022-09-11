@@ -33,12 +33,8 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="sticker" :style="{'left': left + 'px', 'top': top + 'px', 'z-index': depth,
-   'transform': 'rotate(' + rotate + 'deg)'}">
-    <img :src="src" alt="sticker"
-         :style="{'width': width + 'px', 'height': height + 'px',
-         'border-radius': radius, 'object-fit': fit
-         }">
+  <div class="sticker" :style="{ left: left + 'px', top: top + 'px', 'z-index': depth, transform: 'rotate(' + rotate + 'deg)' }">
+    <img :src="src" alt="sticker" :style="{ width: width + 'px', height: height + 'px', 'border-radius': radius, 'object-fit': fit }" />
   </div>
 </template>
 

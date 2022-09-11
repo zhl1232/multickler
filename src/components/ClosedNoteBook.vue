@@ -9,25 +9,22 @@ import Sticker from "./parts/Sticker.vue";
     <div class="belt" @click="$emit('onclickBelt', true)"></div>
     <div class="title">笔记本</div>
     <BookMark justify="flex-end" title="歌曲" bgcolor="rgb(120 186 237 / 80%)" top="20" right="-60" depth="-1" pdr="15" />
-    <BookMark justify="flex-end" title="相册" bgcolor="rgb(237 202 146 / 80%)" top="120" right="-50" depth="-1"
-              pdr="15" />
-    <BookMark justify="flex-end" title="事件" bgcolor="rgb(149 209 157 / 80%)" top="360" right="-55" depth="-1"
-              pdr="10" />
-    <BookMark justify="flex-end" title="游戏" bgcolor="rgb(205 207 234 / 80%)" top="500" right="-65" depth="-1"
-              pdr="20" />
+    <BookMark justify="flex-end" title="相册" bgcolor="rgb(237 202 146 / 80%)" top="120" right="-50" depth="-1" pdr="15" />
+    <BookMark justify="flex-end" title="事件" bgcolor="rgb(149 209 157 / 80%)" top="360" right="-55" depth="-1" pdr="10" />
+    <BookMark justify="flex-end" title="游戏" bgcolor="rgb(205 207 234 / 80%)" top="500" right="-65" depth="-1" pdr="20" />
+    <Sticker depth="1" fit="cover" radius="50%" width="220" height="220" left="160" top="250" src="https://generic-data.oss-cn-chengdu.aliyuncs.com/2022Qixi/d542b8975de686443f3e376b85fbcf53.gif" />
     <Sticker
-      depth="1" fit="cover" radius="50%" width="220" height="220" left="160" top="250"
-      src="https://generic-data.oss-cn-chengdu.aliyuncs.com/2022Qixi/d542b8975de686443f3e376b85fbcf53.gif"
-    />
-    <Sticker
-      rotate="-34" depth="2" fit="fill" radius="50%" width="280" height="200" left="100" top="250"
-      src="https://generic-data.oss-cn-chengdu.aliyuncs.com/2022Qixi/a4bb75071cf9b3c932c32df83fbfaad8.gif"
-    />
-    <Sticker depth="1" fit="fill" radius="50%" width="80" height="80" left="10" top="10"
-             src="https://generic-data.oss-cn-chengdu.aliyuncs.com/2022Qixi/himawari.png"
-    />
+      rotate="-34"
+      depth="2"
+      fit="fill"
+      radius="50%"
+      width="280"
+      height="200"
+      left="100"
+      top="250"
+      src="https://generic-data.oss-cn-chengdu.aliyuncs.com/2022Qixi/a4bb75071cf9b3c932c32df83fbfaad8.gif" />
+    <Sticker depth="1" fit="fill" radius="50%" width="80" height="80" left="10" top="10" src="https://generic-data.oss-cn-chengdu.aliyuncs.com/2022Qixi/himawari.png" />
     <div class="signature sig-1">Time tick away, dream faded away.</div>
-    <div class="signature sig-2">I just want something tacky and cert.</div>
   </div>
 </template>
 
@@ -50,7 +47,7 @@ import Sticker from "./parts/Sticker.vue";
   height: 600px;
   width: 450px;
   box-sizing: border-box;
-  background-color: #EEA6B7;
+  background-color: #eea6b7;
 }
 
 .texture {
@@ -71,13 +68,13 @@ import Sticker from "./parts/Sticker.vue";
   position: absolute;
   right: -15px;
   top: 275px;
-  background-color: #D4ADBC;
+  background-color: #d4adbc;
   width: 120px;
   height: 50px;
 }
 
 .title {
-  color: #EC8AA4;
+  color: #ec8aa4;
   font-size: 80px;
   position: absolute;
   top: 110px;
@@ -85,7 +82,7 @@ import Sticker from "./parts/Sticker.vue";
 }
 
 .signature {
-  color: #B94463;
+  color: #b94463;
   font-size: 20px;
   position: absolute;
   left: 28px;
@@ -93,9 +90,5 @@ import Sticker from "./parts/Sticker.vue";
 
 .sig-1 {
   bottom: 40px;
-}
-
-.sig-2 {
-  bottom: 20px;
 }
 </style>
